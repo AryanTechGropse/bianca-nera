@@ -6,7 +6,7 @@ import Header from "@/header/Header";
 import { t } from "i18next";
 import { callMiddleWare } from "@/httpServices/webHttpServices";
 import { useSelector } from "react-redux";
-import Pagination from "@/Common/Pagination";
+import Pagination from "@/common/Pagination";
 
 const MyLoyaltyPoints = () => {
   const { userId } = useSelector((state) => ({

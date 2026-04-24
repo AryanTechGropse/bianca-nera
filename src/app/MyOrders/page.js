@@ -10,7 +10,7 @@ import OrderCancel from "./OrderCancel";
 import { useTranslation } from "react-i18next";
 import i18n from "@/i18n/i18n";
 import { getCounts, getProfile } from "@/store/serviceSlices/commonSlice";
-import Pagination from "@/Common/Pagination";
+import Pagination from "@/common/Pagination";
 
 const MyOrders = () => {
   const isRTL = i18n.dir() === "rtl";

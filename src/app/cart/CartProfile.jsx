@@ -14,7 +14,7 @@ import {
   setScreenState,
   wishCart,
 } from "@/store/serviceSlices/commonSlice";
-import Loading from "@/Common/Loading";
+import Loading from "@/common/Loading";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Coupons from "./Coupons";
