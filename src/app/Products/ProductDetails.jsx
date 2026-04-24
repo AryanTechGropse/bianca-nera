@@ -1,10 +1,10 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
-import Header from "../../Common/HomeComponents/Header";
-import Footer from "../../Common/HomeComponents/Footer";
+import Header from "@/header/Header";
+import Footer from "@/footer/Footer";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useParams, useSearchParams } from "next/navigation";
-import { callMiddleWare } from "../../httpServices/webHttpServices";
+import { callMiddleWare } from "@/httpServices/webHttpServices";
 import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import { t } from "i18next";
@@ -15,10 +15,11 @@ import {
   setScreenState,
   wishCart,
   wishListCart,
-} from "../../app/serviceSlices/commonSlice";
+} from "@/store/serviceSlices/commonSlice";
 import Products from "./Products";
-import Chatbot from "../../Common/HomeComponents/ChatBot";
-import i18n from "../../../i18n";
+import Chatbot from "@/app/HomeComponents/ChatBot";
+import i18n from "@/i18n/i18n";
+import Head from "next/head";
 
 const COLOUR_MAP = {
   Moka: "#6D3B07",

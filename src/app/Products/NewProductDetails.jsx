@@ -8,11 +8,11 @@ import React, {
   useState,
 } from "react";
 // import JsBarcode from "jsbarcode";
-import Header from "../../Common/HomeComponents/Header";
-import Footer from "../../Common/HomeComponents/Footer";
+import Header from "@/header/Header";
+import Footer from "@/footer/Footer";
 import Link from "next/link";
 import { useRouter, useParams, useSearchParams } from "next/navigation";
-import { callMiddleWare } from "../../httpServices/webHttpServices";
+import { callMiddleWare } from "@/httpServices/webHttpServices";
 import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import i18next, { t } from "i18next";
@@ -23,10 +23,10 @@ import {
   setScreenState,
   wishCart,
   wishListCart,
-} from "../../app/serviceSlices/commonSlice";
+} from "@/store/serviceSlices/commonSlice";
 import Products from "./Products";
-import Chatbot from "../../Common/HomeComponents/ChatBot";
-import i18n from "../../../i18n";
+import Chatbot from "@/app/HomeComponents/ChatBot";
+import i18n from "@/i18n/i18n";
 import { useTranslation } from "react-i18next";
 import Head from "next/head";
 

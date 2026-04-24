@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { callMiddleWare } from "../../httpServices/webHttpServices";
+import { callMiddleWare } from "@/httpServices/webHttpServices";
 import { addAsyncThunkHandlers } from "../reduxHelpers";
-import { authAdmin } from "../../httpServices/commonEndPoints";
+import { authAdmin } from "@/httpServices/commonEndPoints";
 import toast from "react-hot-toast";
 import { set } from "react-hook-form";
 import { t } from "i18next";
