@@ -28,6 +28,7 @@ import Products from "@/app/Products/Products";
 import Chatbot from "@/app/HomeComponents/ChatBot";
 import i18n from "@/i18n/i18n";
 import { useTranslation } from "react-i18next";
+import Head from "next/head";
 
 // const language = typeof window !== "undefined" ? localStorage.getItem("i18nextLng") || "en" : "en";
 
@@ -693,7 +694,27 @@ function ProductDetailContent({ params }) {
       : `Shop ${productData?.name_en || ""} exclusively at Bianca Nera. Discover this stunning designer piece crafted for elegance. Free delivery to Qatar, KSA, UAE & GCC.`;
   return (
     <>
-      <title>{title}</title>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta
+          property="og:image"
+          content={`/${productData?.productImages?.[0]?.image}`}
+        />
+        <meta property="og:url" content={`${mainImage}`} />
+        <meta property="og:type" content="website" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Bianca Nera Product" />
+        <meta name="twitter:description" content="Explore this product" />
+        <meta
+          name="twitter:image"
+          content="https://bianca-nera.com/assets/img/image-1.jpg"
+        />
+      </Head>
       {/* 
         In Next.js App Router, for client components, you can use a separate 
         Server Component for metadata or just use document.title in useEffect.
@@ -1686,7 +1707,6 @@ export default function ProductDetailPage(props) {
     </Suspense>
   );
 }
-
 
 const SkeletonRight = () => (
   <div className="productright">
