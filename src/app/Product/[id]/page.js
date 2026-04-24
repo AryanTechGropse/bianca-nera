@@ -700,10 +700,7 @@ function ProductDetailContent({ params }) {
 
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta
-          property="og:image"
-          content={`/${productData?.productImages?.[0]?.image}`}
-        />
+        <meta property="og:image" content={`${mainImage}`} />
         <meta property="og:url" content={`${mainImage}`} />
         <meta property="og:type" content="website" />
 
