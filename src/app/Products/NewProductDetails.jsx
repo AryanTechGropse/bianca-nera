@@ -27,8 +27,8 @@ import {
 import Products from "./Products";
 import Chatbot from "../../Common/HomeComponents/ChatBot";
 import i18n from "../../../i18n";
-import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
+import Head from "next/head";
 
 const language = localStorage.getItem("i18nextLng") || "en";
 
@@ -762,7 +762,7 @@ const NewProductDetails = () => {
       : `Shop ${productData?.name_en || ""} exclusively at Bianca Nera. Discover this stunning designer piece crafted for elegance. Free delivery to Qatar, KSA, UAE & GCC.`;
   return (
     <>
-      <Helmet>
+      <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
 
@@ -785,7 +785,7 @@ const NewProductDetails = () => {
           name="twitter:image"
           content="https://bianca-nera.com/assets/img/image-1.jpg"
         />
-      </Helmet>
+      </Head>
       <Header />
 
       {/* breadcrumb */}

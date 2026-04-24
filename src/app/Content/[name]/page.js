@@ -7,8 +7,6 @@ import { useSelector } from "react-redux";
 import { useParams } from "next/navigation";
 import { callMiddleWare } from "@/httpServices/webHttpServices";
 import i18next, { t } from "i18next";
-// import Head from "next/head";
-// import { Helmet } from "react-helmet";
 
 const ContentManagement = () => {
   const { isUserLoggedIn } = useSelector((state) => ({
@@ -81,7 +79,6 @@ const ContentManagement = () => {
 
   return (
     <>
-
       <Header />
       <div className="myprofilepage py-lg-5 py-md-4 py-4">
         <div className="container">

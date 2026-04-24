@@ -10,7 +10,6 @@ import Link from "next/link";
 import { t } from "i18next";
 import Chatbot from "@/app/HomeComponents/ChatBot";
 // import Head from "next/head";
-// import { Helmet } from "react-helmet";
 const MyWishlist = () => {
   const [page, setPage] = useState(1);
 
@@ -77,7 +76,6 @@ const MyWishlist = () => {
 
   return (
     <>
-
       <Header />
 
       {wishState?.wishList?.length > 0 ? (

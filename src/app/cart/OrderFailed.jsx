@@ -1,7 +1,6 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import { t } from "i18next";
-import { Helmet } from "react-helmet";
 
 const OrderFailed = () => {
   const router = useRouter();
