@@ -1,3 +1,4 @@
+"use client";
 import io from "socket.io-client";
 import { generateNewSession } from "@/httpServices/sessionId";
 

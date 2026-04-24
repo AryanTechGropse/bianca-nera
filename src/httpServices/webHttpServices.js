@@ -1,3 +1,4 @@
+"use client";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { getDeviceId } from "./deviceId";
